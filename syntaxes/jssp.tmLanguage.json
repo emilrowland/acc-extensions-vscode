@@ -1,0 +1,20 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "JSSP",
+	"injectionSelector": "L:text.html.derivative",
+	"patterns": [
+		{
+			"include": "#tag"
+		},
+		{ "include": "text.html.derivative" }
+	],
+	"repository": {
+		"tag": {
+			"name": "meta.embedded.block.javascript",
+			"begin": "<%",
+			"end": "%>",
+			"patterns": [ { "include": "source.js" } ]
+		}
+	},
+	"scopeName": "source.jssp"
+}
